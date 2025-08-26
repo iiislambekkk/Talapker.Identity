@@ -20,9 +20,12 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
+app.UsePathBase("/auth");
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
 
 app.MapControllers();
 app.MapRazorPages();
